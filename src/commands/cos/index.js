@@ -14,7 +14,8 @@ const help = () => console.log(chalk`
 
   {dim Options:}
 
-    -h, --help            Output usage information
+    -h, --help                Output usage information
+    -p DIR, --prefix=DIR      Upload cos path prefix, default: \`year/month/date\` 
 
   {dim Examples:}
 
@@ -36,6 +37,8 @@ module.exports = async function main(ctx) {
 
   try {
     argv = getArgs(ctx.argv.slice(2), {
+      '--prefix': String,
+      '-p': '--prefix',
     })
   } catch (err) {
     throw err

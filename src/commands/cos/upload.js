@@ -29,19 +29,31 @@ module.exports = async function upload(ctx, argv, args) {
     SecretKey: COS_SECRET_KEY,
   })
 
+  let prefix = argv['--prefix']
+  if (prefix) {
+    prefix = prefix.replace(/\/$/, '')
+  }
+  else {
+    const now = new Date()
+    const year = now.getFullYear()
+    const month = (now.getMonth() + 1).toString().padStart(2, '0')
+    const date = (now.getDate() + 1).toString().padStart(2, '0')
+    prefix = `${year}/${month}/${date}`
+  }
+
   args.forEach(file => {
     cos.sliceUploadFile({
       Bucket: COS_BUCKET,
       Region: COS_REGION,
-      Key: `${file.replace(/^cdn/, 'weapp')}`,
+      Key: `${prefix}/${file}`,
       FilePath: file,
       onProgress(data) {
-        console.log(JSON.stringify(data));
+        // @TODO display process
+        // console.log(JSON.stringify(data))
       }
     }, function(err, data) {
       if (err) throw err
-      console.log(data)
-      console.log(`${data.Key}`)
+      console.log(`Upload success: https://${data.Location}`)
     })
   })
 
