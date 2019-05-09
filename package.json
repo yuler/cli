@@ -7,8 +7,7 @@
   "author": "yuler <joyful4yu@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "ncc build src",
-    "postinstall": ""
+    "build": "ncc build src"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.18.3",
@@ -19,7 +18,9 @@
   "bin": {
     "cli": "bin.js"
   },
-  "files": "dist",
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   }
