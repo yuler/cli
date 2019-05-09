@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@zeit/ncc@^0.18.3":
+  version "0.18.3"
+  resolved "https://registry.yarnpkg.com/@zeit/ncc/-/ncc-0.18.3.tgz#6a84552c7b6710ab510f71e49546fff4e3b5c545"
+
 ajv@^6.5.5:
   version "6.10.0"
   resolved "https://registry.yarnpkg.com/ajv/-/ajv-6.10.0.tgz#90d0d54439da587cd7e843bfb7045f50bd22bdf1"

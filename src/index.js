@@ -10,6 +10,19 @@ const configFiles = require('./util/config/files')
 const CLI_DIR = getCliDir()
 const CLI_CONFIG_PATH = configFiles.getConfigFilePath()
 
+const help = () => chalk`
+  {bold now} [options] <command>
+
+  {dim Commands:}
+
+    cos                  [cmd]       Tencent COS imple operation
+    help                 [cmd]       Displays complete help for [cmd]
+
+  {dim Options:}
+    -h, --help                     Output usage information
+    -v, --version                  Output the version number
+`
+
 const main = async argv_ => {
   let argv = null
   try {
@@ -34,6 +47,12 @@ const main = async argv_ => {
       console.log(require('../package').version)
       return 0
     }
+    if (argv['--help']) {
+      console.log(help())
+      return 0
+    }
+    console.log(help())
+    return 0
   }
   
   if (!commands[subcommand]) {

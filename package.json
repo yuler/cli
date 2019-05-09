@@ -1,18 +1,26 @@
 {
-  "name": "cli",
+  "name": "@yhdx/cli",
   "version": "0.0.1",
   "description": "cli tools",
   "main": "index.js",
   "repository": "https://github.com/yuler/cli.git",
   "author": "yuler <joyful4yu@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "ncc build src",
+    "postinstall": ""
+  },
   "devDependencies": {
+    "@zeit/ncc": "^0.18.3",
     "arg": "^4.1.0",
     "chalk": "^2.4.2",
     "cos-nodejs-sdk-v5": "^2.5.9"
   },
   "bin": {
-    "cli": "src"
+    "cli": "bin/cli.js"
   },
-  "files": "src/*.js"
+  "files": "dist",
+  "publishConfig": {
+    "access": "public"
+  }
 }
