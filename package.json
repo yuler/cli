@@ -16,10 +16,11 @@
     "cos-nodejs-sdk-v5": "^2.5.9"
   },
   "bin": {
-    "cli": "bin.js"
+    "cli": "bin"
   },
   "files": [
-    "dist"
+    "dist",
+    "bin"
   ],
   "publishConfig": {
     "access": "public"
