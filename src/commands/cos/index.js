@@ -20,7 +20,9 @@ const help = () => console.log(chalk`
 
   {gray -} Upload files 
 
-  {cyan $ cli upload image/*.jpg}
+    {cyan $ cli cos upload image/*.jpg}
+
+    {gray -} The subcommand {dim \`set\`} is the default and can be skipped.
 
 `)
 
