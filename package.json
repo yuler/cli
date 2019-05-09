@@ -1,6 +1,6 @@
 {
   "name": "@yhdx/cli",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "cli tools",
   "main": "index.js",
   "repository": "https://github.com/yuler/cli.git",
