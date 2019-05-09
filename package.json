@@ -17,7 +17,7 @@
     "cos-nodejs-sdk-v5": "^2.5.9"
   },
   "bin": {
-    "cli": "bin/cli.js"
+    "cli": "bin.js"
   },
   "files": "dist",
   "publishConfig": {
