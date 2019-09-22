@@ -1,5 +1,4 @@
 const chalk = require('chalk')
-
 const COS = require('cos-nodejs-sdk-v5')
 
 const configFiles = require('../../util/config/files')

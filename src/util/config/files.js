@@ -14,4 +14,3 @@ exports.writeToConfigFile = stuff => {
 exports.getConfigFilePath = () => {
   return CONFIG_FILE_PATH
 }
-

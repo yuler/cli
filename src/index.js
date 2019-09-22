@@ -11,7 +11,7 @@ const CLI_DIR = getCliDir()
 const CLI_CONFIG_PATH = configFiles.getConfigFilePath()
 
 const help = () => chalk`
-  {bold CLI} [options] <command>
+  {bold cli} [options] <command>
 
   {dim Commands:}
 
