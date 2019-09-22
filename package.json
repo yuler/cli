@@ -1,5 +1,5 @@
 {
-  "name": "@yhdx/cli",
+  "name": "@yuler/cli",
   "version": "0.1.0",
   "description": "cli tools",
   "main": "index.js",
@@ -17,11 +17,10 @@
     "cos-nodejs-sdk-v5": "^2.5.9"
   },
   "bin": {
-    "cli": "bin"
+    "cli": "./dist/index.js"
   },
   "files": [
-    "dist",
-    "bin"
+    "dist"
   ],
   "publishConfig": {
     "access": "public"
