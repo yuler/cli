@@ -6,7 +6,7 @@ const configFiles = require('../../util/config/files')
 module.exports = async function upload(ctx, argv, args) {
   if (!args.length) {
     return console.log(
-      chalk`{gray \`}{cyan cli cos upload <files>}{gray \`} numst need <files>`
+      chalk`{gray \`}{cyan yu cos upload <files>}{gray \`} numst need <files>`
     )
   }
 
@@ -19,7 +19,7 @@ module.exports = async function upload(ctx, argv, args) {
 
   if ([COS_SECRET_ID, COS_SECRET_KEY, COS_BUCKET, COS_REGION].some(val => !val)) {
     return console.log(
-      chalk`{gray \`}{cyan cli cos upload <files>}{gray \`} need set COS_SECRET_ID, COS_SECRET_KEY, COS_BUCKET, COS_REGION in ${configFiles.getConfigFilePath()}`
+      chalk`{gray \`}{cyan yu cos upload <files>}{gray \`} need set COS_SECRET_ID, COS_SECRET_KEY, COS_BUCKET, COS_REGION in ${configFiles.getConfigFilePath()}`
     )
   }
 

@@ -6,7 +6,7 @@ const getSubcommand = require('../../util/get-subcommand')
 const upload = require('./upload')
 
 const help = () => console.log(chalk`
-  {bold cli cos} [options] <command>
+  {bold yu cos} [options] <command>
 
   {dim Commands:}
 
@@ -21,7 +21,7 @@ const help = () => console.log(chalk`
 
   {gray -} Upload files 
 
-    {cyan $ cli cos upload image/*.jpg}
+    {cyan $ yu cos upload image/*.jpg}
 
     {gray -} The subcommand {dim \`set\`} is the default and can be skipped.
 
