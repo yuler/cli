@@ -5,7 +5,21 @@ export const getDefaultConfig = async (existingCopy: object) => {
     _: string
     [key: string]: any
   } = {
-    _: 'This is 🐟 cli config file. For more information set: https://github.com/yuler/cli'
+    _: 'This is 🐟 cli config file. For more information set: https://github.com/yuler/cli',
+    cos: {
+      // secret_id:
+      // secret_key:
+      buckets: {
+        nicetuan: {
+          name: 'nicetuan-1257181975',
+          region: 'ap-shanghai'
+        },
+        'nicetuan-test': {
+          name: 'nicetuan-test-1257181975',
+          region: 'ap-shanghai'
+        }
+      }
+    }
   }
 
   if (existingCopy) {
@@ -24,6 +38,7 @@ export const getDefaultConfig = async (existingCopy: object) => {
         }
       }
 
+      migrated = true;
     } catch (err) {}
   }
 

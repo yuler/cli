@@ -6,4 +6,4 @@ const ARG_COMMON = {
   '-d': '--debug',
 }
 
-module.exports = () => ARG_COMMON
+export default () => ARG_COMMON
